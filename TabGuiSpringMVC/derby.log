@@ -1,0 +1,85 @@
+Thu Feb 26 13:22:16 EST 2015 Thread[JavaFX Application Thread,5,main] Cleanup action starting
+java.sql.SQLException: Database 'jdsatdb' not found.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.getNewEmbedConnection(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.AutoloadedDriver.connect(Unknown Source)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at com.jdsat.jdsatfinance.data.Database.<init>(Database.java:35)
+	at com.jdsat.jdsatfinance.data.Database.<clinit>(Database.java:27)
+	at com.jdsat.jdsatfinance.MainApp.start(MainApp.java:20)
+	at com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$153(LauncherImpl.java:821)
+	at com.sun.javafx.application.LauncherImpl$$Lambda$51/1536687548.run(Unknown Source)
+	at com.sun.javafx.application.PlatformImpl.lambda$runAndWait$166(PlatformImpl.java:323)
+	at com.sun.javafx.application.PlatformImpl$$Lambda$44/584634336.run(Unknown Source)
+	at com.sun.javafx.application.PlatformImpl.lambda$null$164(PlatformImpl.java:292)
+	at com.sun.javafx.application.PlatformImpl$$Lambda$47/1027925114.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$165(PlatformImpl.java:291)
+	at com.sun.javafx.application.PlatformImpl$$Lambda$46/501263526.run(Unknown Source)
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$141(WinApplication.java:102)
+	at com.sun.glass.ui.win.WinApplication$$Lambda$37/96639997.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: ERROR XJ004: Database 'jdsatdb' not found.
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.wrapArgsForTransportAcrossDRDA(Unknown Source)
+	... 30 more
+============= begin nested exception, level (1) ===========
+ERROR XJ004: Database 'jdsatdb' not found.
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.wrapArgsForTransportAcrossDRDA(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.getNewEmbedConnection(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.AutoloadedDriver.connect(Unknown Source)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at com.jdsat.jdsatfinance.data.Database.<init>(Database.java:35)
+	at com.jdsat.jdsatfinance.data.Database.<clinit>(Database.java:27)
+	at com.jdsat.jdsatfinance.MainApp.start(MainApp.java:20)
+	at com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$153(LauncherImpl.java:821)
+	at com.sun.javafx.application.LauncherImpl$$Lambda$51/1536687548.run(Unknown Source)
+	at com.sun.javafx.application.PlatformImpl.lambda$runAndWait$166(PlatformImpl.java:323)
+	at com.sun.javafx.application.PlatformImpl$$Lambda$44/584634336.run(Unknown Source)
+	at com.sun.javafx.application.PlatformImpl.lambda$null$164(PlatformImpl.java:292)
+	at com.sun.javafx.application.PlatformImpl$$Lambda$47/1027925114.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$165(PlatformImpl.java:291)
+	at com.sun.javafx.application.PlatformImpl$$Lambda$46/501263526.run(Unknown Source)
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$141(WinApplication.java:102)
+	at com.sun.glass.ui.win.WinApplication$$Lambda$37/96639997.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:745)
+============= end nested exception, level (1) ===========
+Cleanup action completed
+----------------------------------------------------------------
+Thu Feb 26 13:22:17 EST 2015:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.1 - (1616546): instance a816c00e-014b-c71f-f9e5-0000069930b8 
+on database directory C:\Users\Ronald\Documents\NetBeansProjects\JdsatFinance\jdsatdb with class loader sun.misc.Launcher$AppClassLoader@55f96302 
+Loaded from file:/C:/Users/Ronald/Documents/NetBeansProjects/JdsatFinance/target/JdsatFinance-1.0.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_31-b13
+user.dir=C:\Users\Ronald\Documents\NetBeansProjects\JdsatFinance
+os.name=Windows 8.1
+os.arch=amd64
+os.version=6.3
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

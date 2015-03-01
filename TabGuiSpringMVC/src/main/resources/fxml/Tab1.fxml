@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" stylesheets="/styles/FPTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jdsat.jdsatfinance.view.Tab1Controller">
+   <children>
+      <ScrollPane prefHeight="800.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="682.0" prefWidth="1284.0">
+               <children>
+                  <GridPane layoutX="92.0" layoutY="41.0" prefHeight="86.0" prefWidth="960.0">
+                     <children>
+                        <Label id="theader" text="Employee ID" />
+                        <Label id="theader" text="Last Name" GridPane.columnIndex="1" />
+                        <Label id="theader" text="First Name" GridPane.columnIndex="2" />
+                        <Label id="theader" text="MI" GridPane.columnIndex="3" />
+                        <Label id="theader" text="Hire Date" GridPane.columnIndex="4" />
+                        <Label id="theader" text="Position Title" GridPane.columnIndex="5" />
+                        <TextField id="employeeFields" fx:id="employeeIdField" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets right="5.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField id="employeeFields" fx:id="lastNameField" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets right="5.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField id="employeeFields" fx:id="firstNameField" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets right="5.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField id="employeeFields" fx:id="miField" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets right="5.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <DatePicker id="employeeFields" fx:id="hireDatePicker" showWeekNumbers="true" GridPane.columnIndex="4" GridPane.halignment="LEFT" GridPane.rowIndex="1" />
+                        <TextField id="employeeFields" fx:id="positionTitleField" GridPane.columnIndex="5" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets right="5.0" />
+                           </GridPane.margin>
+                        </TextField>
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="144.0" minWidth="10.0" prefWidth="144.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="138.0" minWidth="10.0" prefWidth="126.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="130.0" minWidth="10.0" prefWidth="116.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="147.0" minWidth="10.0" prefWidth="43.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="359.0" minWidth="10.0" prefWidth="127.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="460.0" minWidth="10.0" prefWidth="404.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+                  <Separator layoutX="76.0" layoutY="207.0" prefHeight="0.0" prefWidth="1124.0" />
+                  <Button layoutX="118.0" layoutY="140.0" mnemonicParsing="false" onAction="#handleAddUpdate" prefHeight="25.0" prefWidth="113.0" text="+ Add/Update" />
+                  <TableView fx:id="employeeTable" layoutX="100.0" layoutY="222.0" prefHeight="246.0" prefWidth="760.0">
+                     <columns>
+                        <TableColumn fx:id="employeeIdColumn" prefWidth="107.0" text="Employee ID" />
+                        <TableColumn fx:id="lastNameColumn" prefWidth="83.0" text="Last Name" />
+                        <TableColumn fx:id="firstNameColumn" prefWidth="99.0" text="First Name" />
+                        <TableColumn fx:id="miColumn" prefWidth="33.0" text="MI" />
+                        <TableColumn prefWidth="89.0" text="Reserved" />
+                        <TableColumn fx:id="hireDateColumn" prefWidth="97.0" text="Hire Date" />
+                        <TableColumn fx:id="positionTitleColumn" prefWidth="251.0" text="Position Title" />
+                     </columns>
+                  </TableView>
+                  <Button layoutX="240.0" layoutY="140.0" mnemonicParsing="false" onAction="#handleDeleteEmployee" prefHeight="25.0" prefWidth="97.0" text="- Delete" />
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
