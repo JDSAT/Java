@@ -1,10 +1,8 @@
 com\jdsat\jdsatfinance\model\Employee.class
-com\jdsat\jdsatfinance\data\QueryTool.class
 com\jdsat\jdsatfinance\model\EmployeeService.class
 com\jdsat\jdsatfinance\view\Controller.class
 com\jdsat\jdsatfinance\utils\LocalDateAdapter.class
 com\jdsat\jdsatfinance\view\Tab0Controller.class
-com\jdsat\jdsatfinance\data\Database.class
 com\jdsat\jdsatfinance\utils\CalcHelper.class
 com\jdsat\jdsatfinance\view\Tab1Controller.class
 com\jdsat\jdsatfinance\AppFactory.class
