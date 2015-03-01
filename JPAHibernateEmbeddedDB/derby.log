@@ -1,11 +1,11 @@
 ----------------------------------------------------------------
-Sat Feb 28 16:46:22 EST 2015:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.1 - (1616546): instance a816c00e-014b-d227-8b86-0000067d3b68 
-on database directory C:\Users\Ronald\Documents\NetBeansProjects\JPAHibernateEmbeddedDB\testDB with class loader sun.misc.Launcher$AppClassLoader@73d16e93 
+Sun Mar 01 00:57:29 EST 2015:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.1 - (1616546): instance a816c00e-014b-d3e9-2f3b-00000682d510 
+on database directory C:\Users\Ronald\Documents\GitHub\Java\JPAHibernateEmbeddedDB\testDB with class loader sun.misc.Launcher$AppClassLoader@73d16e93 
 Loaded from file:/C:/Users/Ronald/.m2/repository/org/apache/derby/derby/10.11.1.1/derby-10.11.1.1.jar
 java.vendor=Oracle Corporation
 java.runtime.version=1.8.0_31-b13
-user.dir=C:\Users\Ronald\Documents\NetBeansProjects\JPAHibernateEmbeddedDB
+user.dir=C:\Users\Ronald\Documents\GitHub\Java\JPAHibernateEmbeddedDB
 os.name=Windows 8.1
 os.arch=amd64
 os.version=6.3
