@@ -1,5 +1,6 @@
 package com.jdsat.h2test;
 
+import com.jdsat.h2test.model.Person;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,17 +11,17 @@ public class MainApp {
         DataManager personDataManager=new DataManager<>("pu","Person",Person.class);
         
         /**add single entity**/
-//        Person person=new Person("andyg");       
-//        personDataManager.insertEntity(person);
+        Person person=new Person("andyg");       
+        personDataManager.insertEntity(person);
         
         
         /**delete single entity**/
 //        personDataManager.removeEntity(1000488,Person.class);
         
         /**add multiple entities - standard insert**/
-        for(int i=0;i<250000;i++){
-            personDataManager.insertEntity(new Person("test"+i));
-        }
+//        for(int i=0;i<250000;i++){
+//            personDataManager.insertEntity(new Person("test"+i));
+//        }
         
         /**add multiple entities - List insert**/
 //        List<Person> personsToAdd=new ArrayList<>();
@@ -30,13 +31,13 @@ public class MainApp {
 //        personDataManager.insertEntities(personsToAdd);
         
         /**Delete all entities**/
-        personDataManager.removeAllEntities();
+//        personDataManager.removeAllEntities();
         
         /**print all entities**/
-//        List<Object> personList=personDataManager.getAllEntities();
-//        personList.stream().map((object) -> (Person)object).forEach((p) -> {
-//            System.out.println(p.getPersonId()+""+'\t'+p.getPersonName());
-//        });
+        List<Object> personList=personDataManager.getAllEntities();
+        personList.stream().map((object) -> (Person)object).forEach((p) -> {
+            System.out.println(p.getPersonId()+""+'\t'+p.getPersonName());
+        });
         
         /**shut down EntityManagerFactor and close transaction**/
         personDataManager.shutDown();

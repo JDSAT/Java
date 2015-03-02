@@ -7,8 +7,8 @@ com\jdsat\jdsatfinance\utils\CalcHelper.class
 com\jdsat\jdsatfinance\view\Tab1Controller.class
 com\jdsat\jdsatfinance\AppFactory.class
 com\jdsat\jdsatfinance\MainApp.class
+com\jdsat\jdsatfinance\model\Employee_.class
 com\jdsat\jdsatfinance\view\AbstractController.class
-com\jdsat\jdsatfinance\model\Person.class
 com\jdsat\jdsatfinance\utils\Utils.class
 com\jdsat\jdsatfinance\model\SimpleEmployeeService.class
 com\jdsat\jdsatfinance\view\MainController.class

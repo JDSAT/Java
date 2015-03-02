@@ -43,3 +43,14 @@ Temporary Items
 .apdisk
 /JPAHibernateEmbeddedDB - Copy/target/
 /H2Test/target/
+/TabGui/target/
+/TabGui2/target/
+/PersistObservable/target/
+/JavaFXProject3/nbproject/private/
+/ObservablePersist/nbproject/private/
+/ObservablePersist/dist/
+/PersistedTabGui/nbproject/private/
+/PersistedTabGui/build/
+/PersistedTabGui/dist/
+/JavaFXApplication12/nbproject/private/
+/JavaFXApplication13/nbproject/private/

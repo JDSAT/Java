@@ -1,4 +1,4 @@
-package com.jdsat.h2test;
+package com.jdsat.h2test.model;
 
 import java.io.Serializable;
 import javax.persistence.Column;

@@ -14,5 +14,4 @@ public class AbstractController implements Controller {
     public void setView(Node view) {
         this.view=view;
     }
-    
 }

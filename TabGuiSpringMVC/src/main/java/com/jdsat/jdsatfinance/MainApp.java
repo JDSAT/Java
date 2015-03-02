@@ -1,6 +1,8 @@
 package com.jdsat.jdsatfinance;
 
 import com.jdsat.jdsatfinance.view.MainController;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import javafx.application.Application;
 import static javafx.application.Application.launch;
 import javafx.scene.Parent;
@@ -12,7 +14,13 @@ public class MainApp extends Application {
     private Stage primaryStage;
 
     @Override
-    public void start(Stage stage) throws Exception {       
+    public void start(Stage stage) throws Exception {
+        String current = new java.io.File( "." ).getCanonicalPath();
+        System.out.println("Current dir:"+current);
+//        Path p1=Paths.get("views");
+//        System.out.println(p1.toAbsolutePath());
+        System.exit(0);
+        
         this.primaryStage=stage;
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AppFactory.class);
         MainController mainController = context.getBean(MainController.class);
@@ -30,7 +38,7 @@ public class MainApp extends Application {
         return primaryStage;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) {        
         launch(args);
     }
 }

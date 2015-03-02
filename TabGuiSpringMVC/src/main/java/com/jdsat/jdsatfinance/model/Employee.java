@@ -1,6 +1,10 @@
 package com.jdsat.jdsatfinance.model;
 
 import com.jdsat.jdsatfinance.utils.LocalDateAdapter;
+import java.io.Externalizable;
+import java.io.IOException;
+import java.io.ObjectInput;
+import java.io.ObjectOutput;
 import java.time.LocalDate;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.ObjectProperty;
@@ -8,30 +12,44 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
+import javax.persistence.Access;
+import javax.persistence.AccessType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
-public class Employee {
-    private final IntegerProperty employeeId;
-    private final StringProperty lastName;
-    private final StringProperty firstName;
-    private final StringProperty mi;
-    private final ObjectProperty<LocalDate> hireDate;
-    private final StringProperty positionTitle;
+@Entity
+@Access(AccessType.PROPERTY)
+@Table(name="EMPLOYEE")
+public class Employee implements Externalizable {
+    private IntegerProperty employeeId;
+    private StringProperty lastName;
+    private StringProperty firstName;
+    private StringProperty mi;
+    private ObjectProperty<LocalDate> hireDate;
+    private StringProperty positionTitle;
     
-    public Employee(){
-        this(0,null,null,null,null,null);
-    }
+//    public Employee(){
+//        this(0,null,null,null,null,null);
+//    }
+//    
+//    public Employee(int employeeId,String lastName,String firstName,String mi,
+//            LocalDate hireDate,String positionTitle){
+//        this.employeeId=new SimpleIntegerProperty(employeeId);
+//        this.lastName=new SimpleStringProperty(lastName);
+//        this.firstName=new SimpleStringProperty(firstName);
+//        this.mi=new SimpleStringProperty(mi);
+//        this.hireDate=new SimpleObjectProperty(hireDate);
+//        this.positionTitle=new SimpleStringProperty(positionTitle);
+//    }
     
-    public Employee(Integer employeeId,String lastName,String firstName,String mi,
-            LocalDate hireDate,String positionTitle){
-        this.employeeId=new SimpleIntegerProperty(employeeId);
-        this.lastName=new SimpleStringProperty(lastName);
-        this.firstName=new SimpleStringProperty(firstName);
-        this.mi=new SimpleStringProperty(mi);
-        this.hireDate=new SimpleObjectProperty(hireDate);
-        this.positionTitle=new SimpleStringProperty(positionTitle);
-    }
-    
+    @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
+    @Column(name="EMPLOYEE_ID")
     public int getEmployeeId(){
         return employeeId.get();
     }
@@ -44,6 +62,7 @@ public class Employee {
         return employeeId;
     }
     
+    @Column(name="EMPLOYEE_LNAME")
     public String getLastName(){
         return lastName.get();
     }
@@ -56,6 +75,7 @@ public class Employee {
         return lastName;
     }
     
+    @Column(name="EMPLOYEE_FNAME")
     public String getFirstName(){
         return firstName.get();
     }
@@ -68,6 +88,7 @@ public class Employee {
         return firstName;
     }
     
+    @Column(name="EMPLOYEE_MI")
     public String getMi(){
         return mi.get();
     }
@@ -80,6 +101,7 @@ public class Employee {
         return mi;
     }
     
+    @Column(name="EMPLOYEE_HIREDATE")
     @XmlJavaTypeAdapter(LocalDateAdapter.class)
     public LocalDate getHireDate(){
         return hireDate.get();
@@ -93,6 +115,7 @@ public class Employee {
         return hireDate;
     }
     
+    @Column(name="EMPLOYEE_TITLE")
     public String getPositionTitle(){
         return positionTitle.get();
     }
@@ -118,5 +141,25 @@ public class Employee {
         } else {
             return false;
         }
+    }
+
+    @Override
+    public void writeExternal(ObjectOutput out) throws IOException {
+        out.writeInt(getEmployeeId());
+        out.writeObject(getLastName());
+        out.writeObject(getFirstName());
+        out.writeObject(getMi());
+        out.writeObject(getHireDate());
+        out.writeObject(getPositionTitle());
+    }
+
+    @Override
+    public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException {
+        setEmployeeId(in.readInt());
+        setLastName((String)in.readObject());
+        setFirstName((String)in.readObject());
+        setMi((String) in.readObject());
+        setHireDate((LocalDate)in.readObject());
+        setPositionTitle((String)in.readObject());
     }
 }
