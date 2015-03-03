@@ -1,0 +1,14 @@
+03-02 19:51:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: The object is already closed [90007-185]
+03-02 19:51:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: The object is already closed [90007-185]
+03-02 19:51:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: The object is already closed [90007-185]
+03-02 19:51:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: The object is already closed [90007-185]
+03-02 19:51:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: The object is already closed [90007-185]
+03-02 19:51:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: The object is already closed [90007-185]
+03-02 19:52:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: The object is already closed [90007-185]

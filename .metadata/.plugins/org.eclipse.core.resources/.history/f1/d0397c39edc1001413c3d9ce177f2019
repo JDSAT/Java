@@ -1,0 +1,22 @@
+package rhw;
+
+import org.rosuda.JRI.Rengine;
+import org.rosuda.JRI.REXP;
+
+public class HelloRWorld {
+   static Rengine re; // initialized in constructor or autowired
+
+   public static void helloRWorld() {
+	   REXP rn = re.eval("rnorm(4)");
+	   double[] rnd = rn.asDoubleArray();
+	   for(double d:rnd){
+		   System.out.println(d);
+	   }
+   }
+   
+   public static void main(String[] args){
+	   String[] Rargs = {"--vanilla"};
+	   Rengine re=new Rengine(args, false, null);
+	   helloRWorld();
+   }
+}

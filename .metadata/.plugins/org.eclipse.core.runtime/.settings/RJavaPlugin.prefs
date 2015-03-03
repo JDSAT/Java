@@ -1,0 +1,5 @@
+JRI_DLL_DIR=C\:\\Users\\Ronald\\Documents\\R\\win-library\\3.1\\rJava\\jri\\x64
+JRI_JAR_DIR=C\:\\Users\\Ronald\\Documents\\R\\win-library\\3.1\\rJava\\jri
+JVM_DLL_DIR=C\:\\Program Files\\Java\\jre1.8.0_31\\bin\\server
+R_BIN_DIR=C\:\\Program Files\\R\\R-3.1.2\\bin\\x64
+eclipse.preferences.version=1

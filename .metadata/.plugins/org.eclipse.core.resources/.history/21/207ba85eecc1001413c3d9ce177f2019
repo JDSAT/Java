@@ -1,0 +1,16 @@
+package rhw;
+
+import org.rosuda.JRI.Rengine;
+import org.rosuda.JRI.REXP;
+
+public class HelloWorld {
+   static Rengine rengine; // initialized in constructor or autowired
+
+   public static void helloRWorld() {
+	   REXP rn = rengine.eval("rnorm(4)");
+   }
+   
+   public static void main(String[] args){
+	   helloRWorld();
+   }
+}
